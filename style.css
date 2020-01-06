@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider-container{
+    max-width: 80%;
+    margin: 2em auto;
+    position: relative;
+    border: 3px solid rgb(255, 0, 0);
+    height: 500px;
+}
+
+.slider-container .slide{
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    border: green;
+}
+
+.slider-container .slide img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+
+.slider-container .slide figcaption{
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    margin: 0 auto;
+    color: white;
+    text-shadow: 1px 3px 10px black;
+}
+
+/* prev and next buttons */
+
+.prev, .next{
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    font-size: 3em;
+    border: none;
+    padding: 0 0.5em;
+    top: 50%;
+    position: absolute;
+    color: rgba(26, 26, 26, 06);
+    background-color: rgba(200, 200, 200, 0.1);
+    transition: all 0.5s ease;
+}
+
+.next{
+    right: 0;
+}
+
+.prev:hover, .next:hover{
+    background-color: rgba(26, 26, 26, 0.4);
+    color: rgba(240, 240, 240,0.6);
+}
+
+button::-moz-focus-inner{
+    border: 0;
+}
+
+/* dots container */
+
+.dots-container{
+    position: absolute;
+    bottom: -4em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dots-container .dot{
+    outline: none;
+    cursor: pointer;
+    background: #f2f2f2;
+    padding: 1em;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.5s ease;
+    margin-right: 1em;
+    opacity: 0.6;
+}
+
+.dots-container .dot:hover{
+    background-color: #717171;
+}
+
+.dot.active{
+    background-color: #717171;
+}
