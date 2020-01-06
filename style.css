@@ -5,10 +5,9 @@
 }
 
 .slider-container{
-    max-width: 80%;
+    max-width: 60%;
     margin: 2em auto;
     position: relative;
-    border: 3px solid rgb(255, 0, 0);
     height: 500px;
 }
 
@@ -51,6 +50,7 @@
     border: none;
     padding: 0 0.5em;
     top: 50%;
+    transform: translateY(-50%);
     position: absolute;
     color: rgba(26, 26, 26, 06);
     background-color: rgba(200, 200, 200, 0.1);
